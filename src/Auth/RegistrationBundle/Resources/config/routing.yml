@@ -1,0 +1,13 @@
+auth_registration_homepage:
+    path:     /
+    defaults: { _controller: AuthRegistrationBundle:Default:index }
+
+#
+admin:
+    path:     /admin
+    defaults: { _controller: AuthRegistrationBundle:Default:admin}
+
+users_list:
+    path:     /users
+    defaults: { _controller: AuthRegistrationBundle:Default:showUsers}
+

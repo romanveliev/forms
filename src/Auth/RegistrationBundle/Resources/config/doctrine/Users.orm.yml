@@ -1,0 +1,17 @@
+Auth\RegistrationBundle\Entity\Users:
+    type: entity
+    table: users
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        password:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
