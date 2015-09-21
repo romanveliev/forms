@@ -1,3 +1,7 @@
+form_registration:
+    resource: "@FormRegistrationBundle/Resources/config/routing.yml"
+    prefix:   /
+
 auth_registration:
     resource: "@AuthRegistrationBundle/Resources/config/routing.yml"
     prefix:   /

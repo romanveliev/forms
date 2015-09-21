@@ -1,0 +1,19 @@
+Form\RegistrationBundle\Entity\Users:
+    constraints:
+            - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                    min: 4
+        email:
+            - NotBlank: ~
+            - Email:
+                    message: The email {{ value }} is not a valid email.
+            - Length:
+                    min: 4
+        password:
+            - NotBlank: ~
+            - Length:
+                    min: 5
+                    max: 12

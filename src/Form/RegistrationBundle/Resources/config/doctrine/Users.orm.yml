@@ -1,6 +1,6 @@
-Auth\RegistrationBundle\Entity\Users:
+Form\RegistrationBundle\Entity\Users:
     type: entity
-    table: authusers
+    table: null
     id:
         id:
             type: integer
@@ -11,7 +11,20 @@ Auth\RegistrationBundle\Entity\Users:
         name:
             type: string
             length: 255
+        email:
+            type: string
+            length: 255
         password:
             type: string
             length: 255
     lifecycleCallbacks: {  }
+
+
+    manyToOne:
+        role:
+            targetEntity: Roles
+            inversedBy: users
+            joinColumn:
+                name: role_id
+                referencedColumnName: id
+

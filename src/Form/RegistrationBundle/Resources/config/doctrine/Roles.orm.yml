@@ -1,6 +1,6 @@
-Auth\RegistrationBundle\Entity\Users:
+Form\RegistrationBundle\Entity\Roles:
     type: entity
-    table: authusers
+    table: null
     id:
         id:
             type: integer
@@ -8,10 +8,12 @@ Auth\RegistrationBundle\Entity\Users:
             generator:
                 strategy: AUTO
     fields:
-        name:
-            type: string
-            length: 255
-        password:
+        role:
             type: string
             length: 255
     lifecycleCallbacks: {  }
+
+    oneToMany:
+        users:
+            targetEntity: User
+            mappedBy: role

@@ -1,0 +1,60 @@
+{% extends '::base.html.twig' %}
+{% form_theme form _self %}
+
+{% block form_errors %}
+    {% spaceless %}
+        {% if errors|length > 0 %}
+            <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                <ul class="error_list">
+                    {% for error in errors %}
+                        <li>{{ error.message|trans }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        {% endif %}
+    {% endspaceless %}
+{% endblock form_errors %}
+
+
+{% block body %}
+
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+
+    <div class="container">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" >
+            <h3>{% trans %}registration{% endtrans %}</h3><br/>
+            <form role="form">
+                <div class="form-group">
+                    {{ form_label(form.name)|trans|raw }}
+                    {{ form_widget(form.name) }}
+                    {{ form_errors(form.name) }}
+
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.email)|trans|raw }}
+                    {{ form_widget(form.email) }}
+                    {{ form_errors(form.email) }}
+                </div>
+
+
+                <div class="form-group">
+                    {{ form_widget(form.password)|trans|raw }}
+                    {{ form_errors(form.password)|trans|raw }}
+                </div>
+
+
+                <button type="submit" class="btn btn-default">{% trans %}registration{% endtrans %}</button>
+            </form>
+
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+
+{% endblock %}
