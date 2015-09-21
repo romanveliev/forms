@@ -8,12 +8,12 @@ Form\RegistrationBundle\Entity\Roles:
             generator:
                 strategy: AUTO
     fields:
-        role:
+        name:
             type: string
             length: 255
     lifecycleCallbacks: {  }
 
     oneToMany:
         users:
-            targetEntity: User
-            mappedBy: role
+            targetEntity: Users
+            mappedBy: roles

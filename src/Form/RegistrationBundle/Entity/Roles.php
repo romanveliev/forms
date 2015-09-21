@@ -16,11 +16,12 @@ class Roles
     /**
      * @var string
      */
-    private $role;
+    private $name;
 
     protected $users;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->users = new ArrayCollection();
     }
 
@@ -35,37 +36,37 @@ class Roles
     }
 
     /**
-     * Set role
+     * Set name
      *
-     * @param string $role
+     * @param string $name
      *
      * @return Roles
      */
-    public function setRole($role)
+    public function setName($name)
     {
-        $this->role = $role;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get role
+     * Get name
      *
      * @return string
      */
-    public function getRole()
+    public function getName()
     {
-        return $this->role;
+        return $this->name;
     }
 
     /**
      * Add user
      *
-     * @param \Form\RegistrationBundle\Entity\User $user
+     * @param \Form\RegistrationBundle\Entity\Users $user
      *
      * @return Roles
      */
-    public function addUser(\Form\RegistrationBundle\Entity\User $user)
+    public function addUser(\Form\RegistrationBundle\Entity\Users $user)
     {
         $this->users[] = $user;
 
@@ -75,9 +76,9 @@ class Roles
     /**
      * Remove user
      *
-     * @param \Form\RegistrationBundle\Entity\User $user
+     * @param \Form\RegistrationBundle\Entity\Users $user
      */
-    public function removeUser(\Form\RegistrationBundle\Entity\User $user)
+    public function removeUser(\Form\RegistrationBundle\Entity\Users $user)
     {
         $this->users->removeElement($user);
     }

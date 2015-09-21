@@ -21,7 +21,7 @@ Form\RegistrationBundle\Entity\Users:
 
 
     manyToOne:
-        role:
+        roles:
             targetEntity: Roles
             inversedBy: users
             joinColumn:

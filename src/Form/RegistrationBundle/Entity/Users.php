@@ -116,28 +116,33 @@ class Users
     {
         return $this->password;
     }
+    /**
+     * @var \Form\RegistrationBundle\Entity\Roles
+     */
+    private $roles;
+
 
     /**
-     * Set role
+     * Set roles
      *
-     * @param \Form\RegistrationBundle\Entity\Roles $role
+     * @param \Form\RegistrationBundle\Entity\Roles $roles
      *
      * @return Users
      */
-    public function setRole(\Form\RegistrationBundle\Entity\Roles $role = null)
+    public function setRoles(\Form\RegistrationBundle\Entity\Roles $roles = null)
     {
-        $this->role = $role;
+        $this->roles = $roles;
 
         return $this;
     }
 
     /**
-     * Get role
+     * Get roles
      *
      * @return \Form\RegistrationBundle\Entity\Roles
      */
-    public function getRole()
+    public function getRoles()
     {
-        return $this->role;
+        return $this->roles;
     }
 }
