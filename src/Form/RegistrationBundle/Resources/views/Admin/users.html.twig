@@ -1,0 +1,22 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            <ul>
+                {% for user in users %}
+                    <li>
+                        User name: {{ user.name }}
+                        <ul>
+                            <li>Email: {{ user.email }}</li>
+                            <li>Role: {{ user.roles.id }}</li>
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

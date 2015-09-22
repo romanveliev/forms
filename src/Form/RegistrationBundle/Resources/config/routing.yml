@@ -1,3 +1,4 @@
+#registration
 form_registration_homepage:
     path:     /registration
     defaults: { _controller: FormRegistrationBundle:Default:index }
@@ -7,20 +8,20 @@ registration_success:
     path:     /registration_success
     defaults: { _controller: FormRegistrationBundle:Default:registration }
 
-
+#login
 login:
     path:     /login
     defaults: { _controller: FormRegistrationBundle:Default:login }
-
-#login:
-#    path:     /login
-#    defaults: { _controller: FormRegistrationBundle:Security:login }
-
 
 auth_success:
     path:     /auth_success
     defaults: { _controller: FormRegistrationBundle:Default:authSuccess }
 
+#admin
+admin_homepage:
+    path:     /admin
+    defaults: { _controller: FormRegistrationBundle:Admin:main }
 
-login_check:
-  pattern:   /login_check
+admin_users:
+    path:     /admin/users
+    defaults: { _controller: FormRegistrationBundle:Admin:showUsers }

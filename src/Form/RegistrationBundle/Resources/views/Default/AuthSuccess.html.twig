@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                {% if app.session.flashBag.has('role') %}
+                    <div class="alert alert-success">
+                        {% for msg in app.session.flashBag.get('role') %}
+                            {{ msg|trans }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+{% endblock %}

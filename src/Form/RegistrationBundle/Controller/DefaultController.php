@@ -8,6 +8,7 @@ use Form\RegistrationBundle\Form\UsersType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
@@ -29,7 +30,7 @@ class DefaultController extends Controller
         $form->handleRequest($request);
         if ($form->isValid()) {
             $role = new Roles();
-            $role->setRole('ROLE_ADMIN');
+            $role->setName('ROLE_USER');
 
             $data = $request->request->all();
             $options = ['cost' => 12];
@@ -39,10 +40,11 @@ class DefaultController extends Controller
             $user->setEmail($data['form_registrationbundle_users']['email']);
             $user->setPassword($hashPassword);
 
-            $user->setRole($role);
+            $user->setRoles($role);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
+            $em->persist($role);
             $em->flush();
             return $this->redirect($this->generateUrl('registration_success'));
         }
@@ -74,19 +76,23 @@ class DefaultController extends Controller
             $data = $request->request->all();
             $email = $data['form']['email'];
             $password = $data['form']['password'];
+            $session = new Session();
 
             $user = $this->getDoctrine()
                 ->getRepository('FormRegistrationBundle:Users')
                 ->findOneBy(['email' => $email]);
-            $hashPassword = $user->getPassword();
+            if( $user ){
+                $hashPassword = $user->getPassword();
+                if(password_verify($password, $hashPassword)){
+                    $role = $user->getRoles()->getName();
 
-            if($user && password_verify($password, $hashPassword)){
+                    $session->set('ROLE',$role);
+                    $session->getFlashBag()->add('role', $role);
 
-                return $this->redirect($this->generateUrl('auth_success'));
+                    return $this->redirect($this->generateUrl('auth_success'));
+                }
             }else{
-                $request->getSession()
-                    ->getFlashBag()
-                    ->add('login_error', 'Check the fields!!!')
+                $session->getFlashBag()->add('login_error', 'Check the fields!!!')
                 ;
                 return $this->render('FormRegistrationBundle:Default:Login.html.twig', [
                     'form' => $form->createView(),
@@ -111,6 +117,6 @@ class DefaultController extends Controller
      * @return Response
      */
     public function authSuccessAction(){
-        return new Response('thanks auth');
+        return $this->render('FormRegistrationBundle:Default:AuthSuccess.html.twig');
     }
 }
