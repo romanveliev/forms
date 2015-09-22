@@ -1,0 +1,30 @@
+showUsers:
+    path:     /
+    defaults: { _controller: "FormRegistrationBundle:Users:index" }
+
+showUsers_show:
+    path:     /{id}/show
+    defaults: { _controller: "FormRegistrationBundle:Users:show" }
+
+showUsers_new:
+    path:     /new
+    defaults: { _controller: "FormRegistrationBundle:Users:new" }
+
+showUsers_create:
+    path:     /create
+    defaults: { _controller: "FormRegistrationBundle:Users:create" }
+    methods:  POST
+
+showUsers_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FormRegistrationBundle:Users:edit" }
+
+showUsers_update:
+    path:     /{id}/update
+    defaults: { _controller: "FormRegistrationBundle:Users:update" }
+    methods:  [POST, PUT]
+
+showUsers_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FormRegistrationBundle:Users:delete" }
+    methods:  [POST, DELETE]

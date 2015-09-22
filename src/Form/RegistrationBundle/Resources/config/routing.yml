@@ -1,3 +1,7 @@
+form_registration_showUsers:
+    resource: "@FormRegistrationBundle/Resources/config/routing/users.yml"
+    prefix:   /showUsers
+
 #registration
 form_registration_homepage:
     path:     /registration
@@ -25,3 +29,8 @@ admin_homepage:
 admin_users:
     path:     /admin/users
     defaults: { _controller: FormRegistrationBundle:Admin:showUsers }
+
+#ajax
+validate_password:
+    path:     /ajax
+    defaults: { _controller: FormRegistrationBundle:Ajax:validatePassword }

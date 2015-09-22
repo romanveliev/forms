@@ -4,13 +4,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-            <ul>
+
+                <ul class="list-group">
                 {% for user in users %}
-                    <li>
-                        User name: {{ user.name }}
-                        <ul>
-                            <li>Email: {{ user.email }}</li>
-                            <li>Role: {{ user.roles.id }}</li>
+                    <li class="list-group-item">
+                        User name: <b>{{ user.name }}</b>
+                        <ul class="list-group">
+                            <li class="list-group-item">Email: <b>{{ user.email }}</b></li>
+                            <li class="list-group-item">Role: <b>{{ user.roles.id }}</b></li>
                         </ul>
                     </li>
                 {% endfor %}

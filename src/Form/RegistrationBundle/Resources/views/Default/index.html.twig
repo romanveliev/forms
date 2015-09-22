@@ -21,7 +21,7 @@
 
 {% block body %}
 
-    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate','class':'form-horizontal'}}) }}
 
     <div class="container">
         <div class="col-md-4"></div>
@@ -45,6 +45,9 @@
                 <div class="form-group">
                     {{ form_widget(form.password)|trans|raw }}
                     {{ form_errors(form.password)|trans|raw }}
+                    <div id="passwordHelp" class="alert alert-danger" style="display: none;" role="alert">
+                        {% trans %}<p id="error"></p>{% endtrans %}
+                    </div>
                 </div>
 
 
@@ -56,5 +59,13 @@
 
         </div>
     </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('bundles/formregistration/js/passwordValidation.js') }}"></script>
+
 
 {% endblock %}

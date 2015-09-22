@@ -28,6 +28,7 @@ class DefaultController extends Controller
         $user = new Users();
         $form = $this->createForm(new UsersType(), $user);
         $form->handleRequest($request);
+
         if ($form->isValid()) {
             $role = new Roles();
             $role->setName('ROLE_USER');
@@ -110,7 +111,7 @@ class DefaultController extends Controller
      * @return Response
      */
     public function registrationAction(){
-        return new Response('thanks');
+        return $this->render('FormRegistrationBundle:Default:RegistrationSuccess.html.twig');
     }
 
     /**
