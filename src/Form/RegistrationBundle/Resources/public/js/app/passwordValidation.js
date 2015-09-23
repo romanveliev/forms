@@ -38,7 +38,7 @@ define(['jquery'],function ($) {
                             }
                         }
                     });//end Ajax
-                },100);//end setTimeout()
+                },5000);//end setTimeout()
             });//keypress
         }
     }

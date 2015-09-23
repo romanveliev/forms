@@ -1,6 +1,7 @@
 Form\RegistrationBundle\Entity\Users:
     constraints:
             - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+            - Form\RegistrationBundle\Validator\Constraints\CheckPassword: ~
     properties:
         name:
             - NotBlank: ~

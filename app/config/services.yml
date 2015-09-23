@@ -4,6 +4,11 @@ parameters:
 #    parameter_name: value
 
 services:
+    validator.unique.check_password_validator:
+        class: Form\RegistrationBundle\Validator\Constraints\CheckPasswordValidator
+        tags:
+            - { name: validator.constraint_validator, alias: check_password }
+
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]

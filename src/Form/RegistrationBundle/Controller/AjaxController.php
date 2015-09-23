@@ -2,6 +2,8 @@
 
 namespace Form\RegistrationBundle\Controller;
 
+use Form\RegistrationBundle\Validator\Constraints\CheckPassword;
+use Form\RegistrationBundle\Validator\Constraints\CheckPasswordValidator;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,6 +21,11 @@ class AjaxController extends Controller
     public function validatePasswordAction(Request $request)
     {
         if ($request->isXMLHttpRequest()) {
+
+            $validator = new CheckPasswordValidator();
+
+            $validator->validate('hello', new CheckPassword());
+
             $password = json_decode($request->request->get('password'));
             $length = strlen($password);
             if(!preg_match('/^[a-z0-9_-]{1,18}$/', $password)){

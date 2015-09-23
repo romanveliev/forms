@@ -6,6 +6,8 @@ use Form\RegistrationBundle\Entity\Roles;
 use Form\RegistrationBundle\Entity\Users;
 use Form\RegistrationBundle\Form\MyType;
 use Form\RegistrationBundle\Form\UsersType;
+use Form\RegistrationBundle\Validator\Constraints\CheckPassword;
+use Form\RegistrationBundle\Validator\Constraints\CheckPasswordValidator;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,14 +29,15 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+//        $validator = new CheckPasswordValidator();
+//
+//        $validator->validate('hello', new CheckPassword());
         $user = new Users();
         $form = $this->createForm(new UsersType(), $user);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
             $data = $request->request->all();
-
-            $role = new Roles();
             $role->setName($data['form_registrationbundle_users']['roles']['name']);
 
             $data = $request->request->all();
