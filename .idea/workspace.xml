@@ -23,40 +23,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="passwordValidation.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/public/js/passwordValidation.js">
+      <file leaf-file-name="validation.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/validation.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="11" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+            <state line="32" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.77005345" vertical-offset="0" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AjaxController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/AjaxController.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="60" selection-start="513" selection-end="513" vertical-scroll-proportion="-4.6666665" vertical-offset="216" max-vertical-offset="1116">
+            <state line="49" column="32" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-32.666668" vertical-offset="0" max-vertical-offset="1170">
               <folding>
-                <element signature="e#54#111#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <file leaf-file-name="UsersType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Form/UsersType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="436" selection-end="436" vertical-scroll-proportion="0.32454923" vertical-offset="0" max-vertical-offset="721">
-              <folding />
+            <state line="27" column="31" selection-start="1105" selection-end="1149" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="1008">
+              <folding>
+                <element signature="e#48#88#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validation.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/validation.yml">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="27" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <folding />
+            <state line="62" column="30" selection-start="2143" selection-end="2143" vertical-scroll-proportion="-21.333334" vertical-offset="540" max-vertical-offset="3060">
+              <folding>
+                <element signature="e#54#95#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +86,6 @@
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Auth/RegistrationBundle/Resources/config/doctrine/Users.orm.yml" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/validation.yml" />
-        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Form/UsersType.php" />
-        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Form/AuthType.php" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/auth.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/UsersRepository.php" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/SecurityController.php" />
@@ -93,21 +95,30 @@
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/Roles.php" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/doctrine/Roles.orm.yml" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/doctrine/Users.orm.yml" />
-        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/Users.php" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/AuthSuccess.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Admin/main.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/Login.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Admin/users.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/translations/messages.ru.yml" />
-        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/RegistrationSuccess.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/public/js/passwordValidation.js" />
-        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/validation.yml" />
         <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/AjaxController.php" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/public/js/app/main.js" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/public/js/app.js" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Form/AuthType.php" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Form/MyType.php" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/Author.php" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/Users.php" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/cascadeValidation.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Form/RolesType.php" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/translations/messages.ru.yml" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/public/js/app/passwordValidation.js" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Form/UsersType.php" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/validation.yml" />
       </list>
     </option>
   </component>
@@ -185,11 +196,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -206,18 +213,12 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Forms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Forms" />
+              <option name="myItemId" value="Form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="RegistrationBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,7 +232,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RegistrationBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RegistrationBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -239,7 +274,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RegistrationBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RegistrationBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,7 +367,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15291262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2669903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -288,7 +375,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37935483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -316,65 +403,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Auth/RegistrationBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="56" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="1026">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Auth/RegistrationBundle/Resources/views/pages/usersList.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Auth/RegistrationBundle/Resources/config/validation.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="490" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="0.2555781" vertical-offset="0" max-vertical-offset="493">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Auth/RegistrationBundle/Entity/Registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="94" selection-end="94" vertical-scroll-proportion="0.3243243" vertical-offset="0" max-vertical-offset="1620">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Auth/RegistrationBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Auth/RegistrationBundle/Resources/doc/index.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Auth/RegistrationBundle/AuthRegistrationBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Auth/RegistrationBundle/Form/UsersType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
@@ -517,15 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/UsersRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="35" selection-start="741" selection-end="741" vertical-scroll-proportion="0.6291262" vertical-offset="0" max-vertical-offset="1026">
-          <folding>
-            <element signature="e#45#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="23" selection-start="797" selection-end="797" vertical-scroll-proportion="0.5775401" vertical-offset="0" max-vertical-offset="1548">
@@ -547,13 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/Roles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="6" selection-start="706" selection-end="706" vertical-scroll-proportion="-13.333333" vertical-offset="594" max-vertical-offset="1818">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/doctrine/Roles.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="27" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
@@ -564,13 +576,6 @@
     <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/doctrine/Users.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="62" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.59227467" vertical-offset="1944" max-vertical-offset="2772">
           <folding />
         </state>
       </provider>
@@ -589,54 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="30" selection-start="979" selection-end="1104" vertical-scroll-proportion="-16.666666" vertical-offset="216" max-vertical-offset="1080">
-          <folding>
-            <element signature="e#54#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/translations/messages.ru.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="73" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="72" selection-start="388" selection-end="400" vertical-scroll-proportion="0.27807486" vertical-offset="8" max-vertical-offset="756">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Form/UsersType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="52" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.6180258" vertical-offset="0" max-vertical-offset="954">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Form/AuthType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.4635193" vertical-offset="0" max-vertical-offset="846">
-          <folding>
-            <element signature="e#48#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="52" selection-start="483" selection-end="483" vertical-scroll-proportion="0.28862974" vertical-offset="0" max-vertical-offset="1386">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/RegistrationSuccess.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.52427185" vertical-offset="0" max-vertical-offset="721">
@@ -644,9 +601,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/formregistration/js/app/passwordValidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="83" selection-start="328" selection-end="328" vertical-scroll-proportion="0.20338982" vertical-offset="0" max-vertical-offset="708">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/public/js/app/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="21" selection-start="143" selection-end="143" vertical-scroll-proportion="0.07219251" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="46" selection-start="320" selection-end="320" vertical-scroll-proportion="0.28877005" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/AjaxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="65" selection-start="760" selection-end="760" vertical-scroll-proportion="0.30097088" vertical-offset="215" max-vertical-offset="1098">
+          <folding>
+            <element signature="e#54#111#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Form/AuthType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="1041" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="846">
+          <folding>
+            <element signature="e#48#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/Roles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="18" selection-start="210" selection-end="210" vertical-scroll-proportion="-1.1220527" vertical-offset="1097" max-vertical-offset="1818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/cascadeValidation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="26" selection-start="1246" selection-end="1405" vertical-scroll-proportion="0.7346939" vertical-offset="108" max-vertical-offset="1008">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/public/js/app/passwordValidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="140" selection-start="979" selection-end="979" vertical-scroll-proportion="0.4796634" vertical-offset="0" max-vertical-offset="954">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/translations/messages.ru.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.19251336" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Entity/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="19" selection-start="319" selection-end="324" vertical-scroll-proportion="-0.09847434" vertical-offset="593" max-vertical-offset="2880">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Form/RolesType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="28" selection-start="752" selection-end="752" vertical-scroll-proportion="-16.666666" vertical-offset="0" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="882">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="30" selection-start="979" selection-end="1104" vertical-scroll-proportion="0.9527897" vertical-offset="0" max-vertical-offset="1080">
+          <folding>
+            <element signature="e#54#111#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="32" selection-start="1911" selection-end="1911" vertical-scroll-proportion="-32.666668" vertical-offset="0" max-vertical-offset="1170">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Form/UsersType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="31" selection-start="1105" selection-end="1149" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="1008">
+          <folding>
+            <element signature="e#48#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="90" selection-start="3976" selection-end="4005" vertical-scroll-proportion="0.61864406" vertical-offset="1596" max-vertical-offset="2322">
+        <state line="62" column="30" selection-start="2143" selection-end="2143" vertical-scroll-proportion="-21.333334" vertical-offset="540" max-vertical-offset="3060">
           <folding>
             <element signature="e#54#95#0" expanded="true" />
           </folding>
@@ -655,30 +734,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/config/validation.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="27" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Resources/public/js/passwordValidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="11" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegistrationBundle/Controller/AjaxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="60" selection-start="513" selection-end="513" vertical-scroll-proportion="-4.6666665" vertical-offset="216" max-vertical-offset="1116">
-          <folding>
-            <element signature="e#54#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="436" selection-end="436" vertical-scroll-proportion="0.32454923" vertical-offset="0" max-vertical-offset="721">
+        <state line="32" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.77005345" vertical-offset="0" max-vertical-offset="748">
           <folding />
         </state>
       </provider>

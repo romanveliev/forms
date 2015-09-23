@@ -34,3 +34,10 @@ admin_users:
 validate_password:
     path:     /ajax
     defaults: { _controller: FormRegistrationBundle:Ajax:validatePassword }
+
+
+#cascade
+cascade_validation:
+    path:     /cascade
+    defaults: { _controller: FormRegistrationBundle:Default:cascadeValidation }
+

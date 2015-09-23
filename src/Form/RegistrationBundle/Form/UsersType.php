@@ -17,7 +17,6 @@ class UsersType extends AbstractType
         $builder
             ->add('name', null,['label' => 'Your Name', 'attr'=>['class' => 'form-control']])
             ->add('email', null,['label' => 'Your email', 'attr'=>['class' => 'form-control']])
-
             ->add('password', 'repeated', [
                 'type' => 'password',
                 'invalid_message' => 'The password fields must match.',
@@ -25,7 +24,8 @@ class UsersType extends AbstractType
                 'required' => true,
                 'first_options'  => ['label' => 'Password', 'attr'=>['class' => 'form-control']],
                 'second_options' => ['label' => 'Repeat Password','attr'=>['class' => 'form-control']],
-            ]);
+            ])
+            ->add('roles', new RolesType())
         ;
     }
     
@@ -35,7 +35,8 @@ class UsersType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Form\RegistrationBundle\Entity\Users'
+            'data_class' => 'Form\RegistrationBundle\Entity\Users',
+            'cascade_validation' => true,
         ));
     }
 

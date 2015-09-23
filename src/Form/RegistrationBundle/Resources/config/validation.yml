@@ -18,3 +18,15 @@ Form\RegistrationBundle\Entity\Users:
                     min: 2
                     max: 15
             - Regex: '/^[a-z0-9_-]{1,18}$/'
+        roles:
+           - Valid: ~
+
+
+Form\RegistrationBundle\Entity\Roles:
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                min: 5
+                max: 15
+

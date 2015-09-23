@@ -30,6 +30,12 @@ class Users
     protected $role;
 
 
+    protected $address;
+
+    public function getAddress(){
+        return $this->address;
+    }
+
     /**
      * Get id
      *

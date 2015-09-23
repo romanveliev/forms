@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                {{ form_start(form,{'attr': {'novalidate': 'novalidate','class':'form-horizontal'}}) }}
+
+                <form role="form">
+                    <div class="form-group">
+                        {{ form_label(form.name)|trans|raw }}
+                        {{ form_widget(form.name) }}
+                        {{ form_errors(form.name) }}
+
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.email)|trans|raw }}
+                        {{ form_widget(form.email) }}
+                        {{ form_errors(form.email) }}
+                    </div>
+
+
+                    <div class="form-group">
+                        {{ form_widget(form.password)|trans|raw }}
+                        {{ form_errors(form.password)|trans|raw }}
+                        <div id="passwordHelp" class="alert alert-danger" style="display: none;" role="alert">
+                            {% trans %}<p id="error"></p>{% endtrans %}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_widget(form.roles) }}
+                        {{ form_errors(form.roles) }}
+                    </div>
+
+                    <button type="submit" class="btn btn-default">{% trans %}registration{% endtrans %}</button>
+                </form>
+
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
