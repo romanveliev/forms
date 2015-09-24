@@ -1,4 +1,4 @@
-define(['jquery'],function ($) {
+define(['jquery', 'underscore'],function ($, _) {
 
     function Password(){}
 
@@ -15,30 +15,15 @@ define(['jquery'],function ($) {
                         dataType: 'json',
                         success: function (data) {
                             if((typeof data) == "object"){
-                                if(data['message'] === 0){
-                                    $('#passwordHelp').attr('class', 'alert alert-danger').css('display','block');
-                                    $('#error').text('').append("Password contains invalid characters (\' < > ! , @ | . + = ( ) * & ^ % $ # )");
-                                }
-                                if(data['message'] === 1){
-                                    $('#passwordHelp').attr('class', 'alert alert-danger').css('display','block');
-                                    $('#error').text('').append('Password too short');
-                                }
-                                if(data['message'] === 2){
+                                console.log(data.error);
+                                if(data['error']){
                                     $('#passwordHelp').attr('class', 'alert alert-success').css('display','block');
-                                    $('#error').text('').append('Weak password');
-                                }
-                                if(data['message'] === 3){
-                                    $('#passwordHelp').attr('class', 'alert alert-success').css('display','block');
-                                    $('#error').text('').append('Good password !!!');
-                                }
-                                if(data['message'] === 4){
-                                    $('#passwordHelp').attr('class', 'alert alert-danger').css('display','block');
-                                    $('#error').text('').append('too many symbols');
+                                    $('#error').text('').append(data.error);
                                 }
                             }
                         }
                     });//end Ajax
-                },5000);//end setTimeout()
+                },100);//end setTimeout()
             });//keypress
         }
     }

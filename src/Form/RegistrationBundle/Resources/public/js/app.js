@@ -6,7 +6,8 @@
 requirejs.config({
 
     paths: {
-        jquery: '/js/jquery.min'
+        jquery: '/js/jquery.min',
+        underscore: '/js/underscore-min'
     }
 });
 

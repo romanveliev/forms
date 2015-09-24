@@ -10,3 +10,8 @@ Role: Роль
 The password fields must match.: Поля должны совпадать.
 Check the fields!!!: Проверьте поля!!!
 Password contains invalid characters: Пароль содержит запрещённые символы
+Password too short: Пароль слишком короткий
+Password contains invalid characters: Пароль содержит запрещенные симолы (\' < > ! , @ | . + = ( ) * & ^ % $ # )
+Weak password: Слабый пароль !
+Good password: Хороший пароль !
+Too many symbols: Слишком много символов !!!

@@ -3,7 +3,6 @@
 namespace Form\RegistrationBundle\Controller;
 
 use Form\RegistrationBundle\Validator\Constraints\CheckPassword;
-use Form\RegistrationBundle\Validator\Constraints\CheckPasswordValidator;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,40 +20,18 @@ class AjaxController extends Controller
     public function validatePasswordAction(Request $request)
     {
         if ($request->isXMLHttpRequest()) {
-
-            $validator = new CheckPasswordValidator();
-
-            $validator->validate('hello', new CheckPassword());
+            $data = '';
+            $translator = $this->get('translator');
 
             $password = json_decode($request->request->get('password'));
-            $length = strlen($password);
-            if(!preg_match('/^[a-z0-9_-]{1,18}$/', $password)){
-                return new JsonResponse([$password, 'message' => 0]);
+            $passwordConstraint = new CheckPassword();
+            $error = $this->get('validator')->validateValue($password, $passwordConstraint);
+            if (count($error) == 1) {
+                $data = array('success' => false, 'error' => $translator->trans($error[0]->getMessageTemplate()));
             }
-            /*
-             * too small password
-             */
-            if( ($length >= 0) && ($length <= 5) ){
-                return new JsonResponse([$password, 'message' => 1]);
-            }
-            /*
-             * weak password
-             */
-            if( ($length >= 6) && ($length <= 8) ){
-                return new JsonResponse([$password, 'message' => 2]);
-            }
-            /*
-             * good password
-             */
-            if( ($length >= 9) && ($length <= 15) ){
-                return new JsonResponse([$password, 'message' => 3]);
-            }
-            /*
-             * too many symbols
-             */
-            if($length >=15 ){
-                return new JsonResponse([$password, 'message' => 4]);
-            }
+
+
+            return new JsonResponse($data);
 
         }
         return new JsonResponse('json response', 500);

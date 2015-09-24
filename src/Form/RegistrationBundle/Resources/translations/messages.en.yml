@@ -7,3 +7,8 @@ Role: Role
 
 The password fields must match.: The password fields must match.
 
+Password too short: Password too short !!
+Password contains invalid characters: Password contains invalid characters (\' < > ! , @ | . + = ( ) * & ^ % $ # )
+Weak password: Weak password
+Good password: Good password !!!
+Too many symbols: Too many symbols !!!
