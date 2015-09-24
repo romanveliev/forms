@@ -1,9 +1,0 @@
-Auth\RegistrationBundle\Entity\Users:
-        protperities:
-              name:
-                  - Type:
-                          type: string
-                          message: The value {{ value }} is not a valid {{ type }}.
-                  - NotBlank: ~
-                  - Length:
-                         min: 5

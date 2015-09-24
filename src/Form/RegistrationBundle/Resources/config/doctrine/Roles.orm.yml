@@ -13,7 +13,7 @@ Form\RegistrationBundle\Entity\Roles:
             length: 255
     lifecycleCallbacks: {  }
 
-    oneToMany:
-        users:
-            targetEntity: Users
-            mappedBy: roles
+#    oneToMany:
+#        users:
+#            targetEntity: Users
+#            mappedBy: roles

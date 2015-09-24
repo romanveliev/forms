@@ -17,6 +17,12 @@ login:
     path:     /login
     defaults: { _controller: FormRegistrationBundle:Default:login }
 
+login_check:
+    path:     /login_check
+    defaults: { _controller: FormRegistrationBundle:Default:login_check }
+
+
+###
 auth_success:
     path:     /auth_success
     defaults: { _controller: FormRegistrationBundle:Default:authSuccess }

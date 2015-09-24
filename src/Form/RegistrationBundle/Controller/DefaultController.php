@@ -6,8 +6,6 @@ use Form\RegistrationBundle\Entity\Roles;
 use Form\RegistrationBundle\Entity\Users;
 use Form\RegistrationBundle\Form\MyType;
 use Form\RegistrationBundle\Form\UsersType;
-use Form\RegistrationBundle\Validator\Constraints\CheckPassword;
-use Form\RegistrationBundle\Validator\Constraints\CheckPasswordValidator;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,19 +24,22 @@ class DefaultController extends Controller
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     * @throws \Symfony\Component\Security\Core\Exception\AccessDeniedException
      */
     public function indexAction(Request $request)
     {
-//        $validator = new CheckPasswordValidator();
-//
-//        $validator->validate('hello', new CheckPassword());
+        if (!$this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            throw $this->createAccessDeniedException();
+        }
+
         $user = new Users();
         $form = $this->createForm(new UsersType(), $user);
         $form->handleRequest($request);
 
         if ($form->isValid()) {
             $data = $request->request->all();
-            $role->setName($data['form_registrationbundle_users']['roles']['name']);
+//            $role = new Roles();
+//            $role->setName($data['form_registrationbundle_users']['roles']['name']);
 
             $data = $request->request->all();
             $options = ['cost' => 12];
@@ -48,11 +49,11 @@ class DefaultController extends Controller
             $user->setEmail($data['form_registrationbundle_users']['email']);
             $user->setPassword($hashPassword);
 
-            $user->setRoles($role);
+//            $user->setRoles($role);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
-            $em->persist($role);
+//            $em->persist($role);
             $em->flush();
             return $this->redirect($this->generateUrl('registration_success'));
         }
@@ -68,49 +69,21 @@ class DefaultController extends Controller
      */
     public function loginAction(Request $request){
 
-        $form = $this->createFormBuilder()
-            ->add('email','text', ['label' => 'Email', 'attr'=>['class' => 'form-control'],
-                    'constraints' => [new NotBlank(),new Length(['min'=>5,'max'=>15]), new Email()]
-               ])
-            ->add('password', 'password',['attr'=>['class' => 'form-control'],
-                'constraints' => [new NotBlank(),new Length(['min'=>5,'max'=>15])]
-            ])
-            ->getForm()
-        ;
+        $authenticationUtils = $this->get('security.authentication_utils');
+        // get the login error if there is one
+        $error = $authenticationUtils->getLastAuthenticationError();
 
-        $form->handleRequest($request);
-
-        if ($form->isValid()) {
-            $data = $request->request->all();
-            $email = $data['form']['email'];
-            $password = $data['form']['password'];
-            $session = new Session();
-
-            $user = $this->getDoctrine()
-                ->getRepository('FormRegistrationBundle:Users')
-                ->findOneBy(['email' => $email]);
-            if( $user ){
-                $hashPassword = $user->getPassword();
-                if(password_verify($password, $hashPassword)){
-                    $role = $user->getRoles()->getName();
-
-                    $session->set('ROLE',$role);
-                    $session->getFlashBag()->add('role', $role);
-
-                    return $this->redirect($this->generateUrl('auth_success'));
-                }
-            }else{
-                $session->getFlashBag()->add('login_error', 'Check the fields!!!')
-                ;
-                return $this->render('FormRegistrationBundle:Default:Login.html.twig', [
-                    'form' => $form->createView(),
-                ]);
-            }
-        }
+        // last username entered by the user
+        $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('FormRegistrationBundle:Default:Login.html.twig', [
-            'form' => $form->createView(),
+            'last_username' => $lastUsername,
+            'error'         => $error,
         ]);
+
+    }
+
+    public function loginCheckAction(){
 
     }
 

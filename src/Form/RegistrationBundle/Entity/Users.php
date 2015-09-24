@@ -1,11 +1,12 @@
 <?php
 
 namespace Form\RegistrationBundle\Entity;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Users
  */
-class Users
+class Users implements UserInterface, \Serializable
 {
     /**
      * @var integer
@@ -27,13 +28,18 @@ class Users
      */
     private $password;
 
-    protected $role;
+    private $role;
 
+    protected $roles;
 
-    protected $address;
+    public function getRole(){
+        return $this->role;
+    }
 
-    public function getAddress(){
-        return $this->address;
+    public function setRole($role){
+        $this->role = $role;
+
+        return $this;
     }
 
     /**
@@ -66,11 +72,6 @@ class Users
      * @return string
      */
     public function getName()
-    {
-        return $this->name;
-    }
-
-    public function getUsername()
     {
         return $this->name;
     }
@@ -125,7 +126,6 @@ class Users
     /**
      * @var \Form\RegistrationBundle\Entity\Roles
      */
-    private $roles;
 
 
     /**
@@ -135,20 +135,68 @@ class Users
      *
      * @return Users
      */
-    public function setRoles(\Form\RegistrationBundle\Entity\Roles $roles = null)
-    {
-        $this->roles = $roles;
-
-        return $this;
-    }
+//    public function setRoles(\Form\RegistrationBundle\Entity\Roles $roles = null)
+//    {
+//        $this->roles = $roles;
+//
+//        return $this;
+//    }
 
     /**
      * Get roles
      *
      * @return \Form\RegistrationBundle\Entity\Roles
      */
+//    public function getRoles()
+//    {
+//        return $this->roles;
+//    }
+
+
+////
+    public function getUsername()
+    {
+        return $this->name;
+    }
+
+    public function getSalt()
+    {
+        // you *may* need a real salt depending on your encoder
+        // see section on salt below
+        return null;
+    }
+
     public function getRoles()
     {
-        return $this->roles;
+        return array($this->role);
     }
+
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->name,
+            $this->password,
+            // see section on salt below
+            // $this->salt,
+        ));
+    }
+
+    /** @see \Serializable::unserialize() */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->name,
+            $this->password,
+            // see section on salt below
+            // $this->salt
+            ) = unserialize($serialized);
+    }
+
+    public function eraseCredentials()
+    {
+    }
+
 }

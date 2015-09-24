@@ -13,42 +13,33 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class AdminController extends Controller
 {
     /**
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     * @return Response
+     * @throws \Symfony\Component\Security\Core\Exception\AccessDeniedException
      */
     public function mainAction()
     {
-        $session = new Session();
-        if($session->get('ROLE') =='ROLE_ADMIN'){
-            return $this->render('FormRegistrationBundle:Admin:main.html.twig', array(
-                // ...
-            ));
-        }else{
-            return $this->redirectToRoute('login');
+        if (!$this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            throw $this->createAccessDeniedException();
         }
+
+        return $this->render('FormRegistrationBundle:Admin:main.html.twig', array(
+            // ...
+        ));
     }
 
     /**
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @return Response
+     * @throws \Symfony\Component\Security\Core\Exception\AccessDeniedException
      */
     public function showUsersAction(){
-        $session = new Session();
-        if($session->get('ROLE') =='ROLE_ADMIN'){
-            $users = $this->getDoctrine()
-                  ->getRepository('FormRegistrationBundle:Users')
-                  ->findAll();
-
-//            foreach($users as $user){
-//                $role = $user->getRoles()->getName();
-//                $user->setRoles($role);
-//                dump($user);
-//            }
-//die();
-            return $this->render('FormRegistrationBundle:Admin:users.html.twig', array(
-                'users' => $users,
-            ));
-
-        }else{
-            return $this->redirectToRoute('login');
+        if (!$this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')) {
+            throw $this->createAccessDeniedException();
         }
+        $users = $this->getDoctrine()
+              ->getRepository('FormRegistrationBundle:Users')
+              ->findAll();
+        return $this->render('FormRegistrationBundle:Admin:users.html.twig', array(
+            'users' => $users,
+        ));
     }
 }

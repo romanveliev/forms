@@ -45,8 +45,9 @@
                 </div>
 
                 <div class="form-group">
-                    {{ form_widget(form.roles)|trans|raw }}
-                    {{ form_errors(form.roles) }}
+                    {{ form_label(form.role)|trans|raw }}
+                    {{ form_widget(form.role) }}
+                    {{ form_errors(form.role) }}
                 </div>
 
                 <button type="submit" class="btn btn-default">{% trans %}registration{% endtrans %}</button>

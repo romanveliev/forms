@@ -11,6 +11,9 @@ Form\RegistrationBundle\Entity\Users:
         name:
             type: string
             length: 255
+        role:
+            type: string
+            length: 255
         email:
             type: string
             length: 255
@@ -20,11 +23,11 @@ Form\RegistrationBundle\Entity\Users:
     lifecycleCallbacks: {  }
 
 
-    manyToOne:
-        roles:
-            targetEntity: Roles
-            inversedBy: users
-            joinColumn:
-                name: role_id
-                referencedColumnName: id
-
+#    manyToOne:
+#        roles:
+#            targetEntity: Roles
+#            inversedBy: users
+#            joinColumn:
+#                name: role_id
+#                referencedColumnName: id
+#

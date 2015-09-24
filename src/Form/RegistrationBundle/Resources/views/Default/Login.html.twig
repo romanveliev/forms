@@ -1,5 +1,5 @@
 {% extends '::base.html.twig' %}
-{% form_theme form _self %}
+{#{% form_theme form _self %}#}
 
 {% block form_errors %}
     {% spaceless %}
@@ -21,46 +21,87 @@
 
 {% block body %}
 
-    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
-
     <div class="container">
-        <div class="col-md-4"></div>
-        <div class="col-md-4" >
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
 
-            {% if app.session.flashBag.has('login_error') %}
-                <div class="alert alert-danger">
-                    {% for msg in app.session.flashBag.get('login_error') %}
-                        {{ msg|trans }}
-                    {% endfor %}
-                </div>
-            {% endif %}
+                <h3>{% trans %}Login{% endtrans %}</h3>
 
+                {% if error %}
+                    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
 
-            <h3>{% trans %}Login{% endtrans %}</h3><br/><br/>
-            <form role="form">
+                <form action="{{ path('login_check') }}" method="post" role="form">
+                    <div class="form-group">
+                        <label for="username">{% trans %}Login{% endtrans %}:</label>
+                        <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" />
+                    </div>
 
-                <div class="form-group">
-                    {{ form_label(form.email)|trans|raw }}
-                    {{ form_widget(form.email) }}
-                    {{ form_errors(form.email) }}
-                </div>
+                    <div class="form-group">
+                        <label for="password">{% trans %}Password{% endtrans %}:</label>
+                        <input type="password" class="form-control" id="password" name="_password" />
+                    </div>
 
+                    {#
+                        If you want to control the URL the user
+                        is redirected to on success (more details below)
+                        <input type="hidden" name="_target_path" value="/account" />
+                    #}
 
-
-                <div class="form-group">
-                    {{ form_label(form.password)|trans|raw }}
-                    {{ form_widget(form.password) }}
-                    {{ form_errors(form.password) }}
-                </div>
-
-
-                <button type="submit" class="btn btn-default">{% trans %}Log in{% endtrans %}</button>
-            </form>
+                    <button type="submit" class="btn btn-default">{% trans %}Login{% endtrans %}</button>
+                </form>
 
 
-            {{ form_end(form) }}
-
+            </div>
+            <div class="col-md-4"></div>
         </div>
     </div>
+
+
+
+
+
+    {#{{ form_start(form,{'attr': {'novalidate': 'novalidate', 'action': 'login_check'}}) }}#}
+
+    {#<div class="container">#}
+        {#<div class="col-md-4"></div>#}
+        {#<div class="col-md-4" >#}
+
+            {#{% if app.session.flashBag.has('login_error') %}#}
+                {#<div class="alert alert-danger">#}
+                    {#{% for msg in app.session.flashBag.get('login_error') %}#}
+                        {#{{ msg|trans }}#}
+                    {#{% endfor %}#}
+                {#</div>#}
+            {#{% endif %}#}
+
+
+            {#<h3>{% trans %}Login{% endtrans %}</h3><br/><br/>#}
+            {#<form role="form">#}
+
+                {#<div class="form-group">#}
+                    {#{{ form_label(form.email)|trans|raw }}#}
+                    {#{{ form_widget(form.email) }}#}
+                    {#{{ form_errors(form.email) }}#}
+                {#</div>#}
+
+
+
+                {#<div class="form-group">#}
+                    {#{{ form_label(form.password)|trans|raw }}#}
+                    {#{{ form_widget(form.password) }}#}
+                    {#{{ form_errors(form.password) }}#}
+                {#</div>#}
+
+
+                {#<button type="submit" class="btn btn-default">{% trans %}Log in{% endtrans %}</button>#}
+            {#</form>#}
+
+
+            {#{{ form_end(form) }}#}
+
+        {#</div>#}
+    {#</div>#}
 
 {% endblock %}

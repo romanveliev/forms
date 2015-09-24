@@ -1,7 +1,6 @@
 Form\RegistrationBundle\Entity\Users:
     constraints:
             - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
-            - Form\RegistrationBundle\Validator\Constraints\CheckPassword: ~
     properties:
         name:
             - NotBlank: ~
@@ -26,8 +25,7 @@ Form\RegistrationBundle\Entity\Users:
 Form\RegistrationBundle\Entity\Roles:
     properties:
         name:
-            - NotBlank: ~
-            - Length:
-                min: 5
-                max: 15
+            - Choice:
+                choices:  [ROLE_ADMIN, ROLE_USER]
+
 

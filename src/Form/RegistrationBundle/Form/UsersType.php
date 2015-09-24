@@ -25,7 +25,13 @@ class UsersType extends AbstractType
                 'first_options'  => ['label' => 'Password', 'attr'=>['class' => 'form-control']],
                 'second_options' => ['label' => 'Repeat Password','attr'=>['class' => 'form-control']],
             ])
-            ->add('roles', new RolesType())
+            ->add('role', 'choice',['choices'=>
+                [
+                    'ROLE_ADMIN'=>'admin',
+                    'ROLE_USER' =>'user',
+                ],
+                'label' => 'Role', 'attr'=>['class' => 'form-control']])
+//            ->add('roles', new RolesType())
         ;
     }
     

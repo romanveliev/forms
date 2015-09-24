@@ -1,24 +1,44 @@
 # To get started with security, check out the documentation:
 # http://symfony.com/doc/current/book/security.html
 security:
+    encoders:
+        Form\RegistrationBundle\Entity\Users:
+            algorithm: bcrypt
+            cost: 12
 
-    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    role_hierarchy:
+        ROLE_USER:        ROLE_USER
+        ROLE_ADMIN:       ROLE_ADMIN
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
     providers:
-        in_memory:
-            memory: ~
+        our_db_provider:
+            entity:
+                class: FormRegistrationBundle:Users
+                property: email
+                # if you're using multiple entity managers
+                # manager_name: customer
+
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/registration, roles: IS_AUTHENTICATED_ANONYMOUSLY }
 
     firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
-        main:
+        # order matters! This must be before the ^/ firewall
+        login_firewall:
+            pattern:   ^/login$
             anonymous: ~
-            # activate different ways to authenticate
+        secured_area:
+            pattern:    ^/
+            form_login: ~
 
-            # http_basic: ~
-            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
 
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+    firewalls:
+        default:
+            http_basic: ~
+            provider: our_db_provider
+            form_login:
+                login_path: /login
+                check_path: /login_check
+
