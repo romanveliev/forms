@@ -14,4 +14,4 @@ Password too short: Пароль слишком короткий
 Password contains invalid characters: Пароль содержит запрещенные симолы (\' < > ! , @ | . + = ( ) * & ^ % $ # )
 Weak password: Слабый пароль !
 Good password: Хороший пароль !
-Too many symbols: Слишком много символов !!!
+Too many symbols: Too many symbols !!!

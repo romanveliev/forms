@@ -19,10 +19,6 @@ security:
                 # if you're using multiple entity managers
                 # manager_name: customer
 
-    access_control:
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/registration, roles: IS_AUTHENTICATED_ANONYMOUSLY }
 
     firewalls:
         # order matters! This must be before the ^/ firewall
@@ -33,7 +29,6 @@ security:
             pattern:    ^/
             form_login: ~
 
-
     firewalls:
         default:
             http_basic: ~
@@ -41,4 +36,9 @@ security:
             form_login:
                 login_path: /login
                 check_path: /login_check
+
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/registration, roles: IS_AUTHENTICATED_ANONYMOUSLY }
 

@@ -15,7 +15,7 @@ Form\RegistrationBundle\Entity\Users:
         password:
             - NotBlank: ~
             - Length:
-                    min: 2
+                    min: 4
                     max: 15
             - Regex: '/^[a-z0-9_-]{1,18}$/'
         roles:

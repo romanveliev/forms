@@ -27,9 +27,8 @@ class AjaxController extends Controller
             $passwordConstraint = new CheckPassword();
             $error = $this->get('validator')->validateValue($password, $passwordConstraint);
             if (count($error) == 1) {
-                $data = array('success' => false, 'error' => $translator->trans($error[0]->getMessageTemplate()));
+                $data = array('success' => false, 'error' => $translator->trans($error[0]->getMessageTemplate()),'code' => $error[0]->getCode());
             }
-
 
             return new JsonResponse($data);
 
