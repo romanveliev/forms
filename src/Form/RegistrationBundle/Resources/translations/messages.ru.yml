@@ -1,17 +1,17 @@
 registration: Регистрация
-Your Name: Имя
-Your email: Email
-Password: Пароль
-Repeat Password: Повторите пароль
-Login: Логин
-Role: Роль
-
+form_name: Имя
+form_email: Email
+form_password: Пароль
+form_repeat_password: Повторите пароль
+login: Логин
+role: Роль
+password: Пароль
 
 The password fields must match.: Поля должны совпадать.
 Check the fields!!!: Проверьте поля!!!
-Password contains invalid characters: Пароль содержит запрещённые символы
-Password too short: Пароль слишком короткий
-Password contains invalid characters: Пароль содержит запрещенные симолы (\' < > ! , @ | . + = ( ) * & ^ % $ # )
-Weak password: Слабый пароль !
-Good password: Хороший пароль !
-Too many symbols: Too many symbols !!!
+
+password_too_short: Пароль слишком короткий
+password_invalid_characters: Пароль содержит запрещенные симолы (\' < > ! , @ | . + = ( ) * & ^ % $ # )
+weak_password: Слабый пароль !
+good_password: Хороший пароль !
+too_many_symbols: Too many symbols !!!

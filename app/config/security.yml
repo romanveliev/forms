@@ -29,8 +29,8 @@ security:
             pattern:    ^/
             form_login: ~
 
-    firewalls:
         default:
+            anonymous: ~
             http_basic: ~
             provider: our_db_provider
             form_login:

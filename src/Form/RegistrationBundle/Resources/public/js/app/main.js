@@ -1,4 +1,4 @@
-define(['./passwordValidation','underscore','jquery'],function (passwordvalidation, _, $) {
+define(['./passwordValidation'],function (passwordvalidation) {
     var Password ;
     Password = new passwordvalidation;
     Password.check();

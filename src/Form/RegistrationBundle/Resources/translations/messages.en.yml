@@ -1,16 +1,17 @@
 registration: Registration
-Your Name: Your Name
-Your email: Your email
-Password: PasswordEN
-Login: Login
-Repeat Password: Repeat Password
-Role: Role
+form_name: Your Name
+form_email: Your email
+form_password: Password
+login: Login
+form_repeat_password: Repeat Password
+role: Role
+password: Password
 
 The password fields must match.: The password fields must match.
 Check the fields!!!: Check the fields!!!
 
-Password too short: Password too short !!
-Password contains invalid characters: Password contains invalid characters (\' < > ! , @ | . + = ( ) * & ^ % $ # )
-Weak password: Weak password
-Good password: Good password !!!
-Too many symbols: Too many symbols !!!
+password_too_short: Password too short !!
+password_invalid_characters: Password contains invalid characters (\' < > ! , @ | . + = ( ) * & ^ % $ # )
+weak_password: Weak password
+good_password: Good password !!!
+too_many_symbols: Too many symbols !!!

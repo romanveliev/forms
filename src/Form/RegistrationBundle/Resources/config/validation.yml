@@ -22,6 +22,7 @@ Form\RegistrationBundle\Entity\Users:
            - Valid: ~
 
 
+
 Form\RegistrationBundle\Entity\Roles:
     properties:
         name:
