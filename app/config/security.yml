@@ -22,20 +22,8 @@ security:
 
     firewalls:
         # order matters! This must be before the ^/ firewall
-        login_firewall:
-            pattern:   ^/login$
-            anonymous: ~
-        secured_area:
-            pattern:    ^/
-            form_login: ~
-
-        default:
-            anonymous: ~
-            http_basic: ~
-            provider: our_db_provider
-            form_login:
-                login_path: /login
-                check_path: /login_check
+      main:
+                 anonymous: ~
 
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }

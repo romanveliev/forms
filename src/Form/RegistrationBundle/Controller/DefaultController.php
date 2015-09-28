@@ -6,6 +6,7 @@ use Form\RegistrationBundle\Entity\Roles;
 use Form\RegistrationBundle\Entity\Users;
 use Form\RegistrationBundle\Form\MyType;
 use Form\RegistrationBundle\Form\UsersType;
+use ReCaptcha\ReCaptcha;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,37 +24,43 @@ use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
 class DefaultController extends Controller
 {
     /**
+     * @var string
+     */
+    private $captchaSecretKey;
+
+    /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
      * @throws \Symfony\Component\Security\Core\Exception\AccessDeniedException
      */
     public function indexAction(Request $request)
     {
-
+        $this->captchaSecretKey = $this->getParameter('captcha_private_key');
         $user = new Users();
         $form = $this->createForm(new UsersType(), $user);
-        $form->handleRequest($request);
 
+        $form->handleRequest($request);
         if ($form->isValid()) {
             $data = $request->request->all();
-//            $role = new Roles();
-//            $role->setName($data['form_registrationbundle_users']['roles']['name']);
+            if(isset($data['g-recaptcha-response'])){
+                $recaptcha = new ReCaptcha($this->captchaSecretKey);
+                $resp = $recaptcha->verify($data['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 
-            $data = $request->request->all();
-            $options = ['cost' => 12];
-            $hashPassword = password_hash($data['form_registrationbundle_users']['password']['first'], PASSWORD_BCRYPT, $options);
+                if($resp->isSuccess()){
+                    $data = $request->request->all();
+                    $options = ['cost' => 12];
+                    $hashPassword = password_hash($data['form_registrationbundle_users']['password']['first'], PASSWORD_BCRYPT, $options);
 
-            $user->setName($data['form_registrationbundle_users']['name']);
-            $user->setEmail($data['form_registrationbundle_users']['email']);
-            $user->setPassword($hashPassword);
+                    $user->setName($data['form_registrationbundle_users']['name']);
+                    $user->setEmail($data['form_registrationbundle_users']['email']);
+                    $user->setPassword($hashPassword);
 
-//            $user->setRoles($role);
-
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($user);
-//            $em->persist($role);
-            $em->flush();
-            return $this->redirect($this->generateUrl('registration_success'));
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($user);
+                    $em->flush();
+                    return $this->redirect($this->generateUrl('registration_success'));
+                }
+            }
         }
 
         return $this->render('FormRegistrationBundle:Default:index.html.twig', [
@@ -66,20 +73,55 @@ class DefaultController extends Controller
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
      */
     public function loginAction(Request $request){
+        $form = $this->createFormBuilder()
+            ->add('email','text', ['label' => 'Email', 'attr'=>['class' => 'form-control'],
+                'constraints' => [new NotBlank(),new Length(['min'=>5,'max'=>15]), new Email()]
+            ])
+            ->add('password', 'password',['attr'=>['class' => 'form-control'],
+                'constraints' => [new NotBlank(),new Length(['min'=>5,'max'=>15])]
+            ])
+            ->getForm()
+        ;
+        $form->handleRequest($request);
+        if ($form->isValid()) {
+            $data = $request->request->all();
 
-        $authenticationUtils = $this->get('security.authentication_utils');
-        // get the login error if there is one
-        $error = $authenticationUtils->getLastAuthenticationError();
+            if(isset($data['g-recaptcha-response'])){
+                $recaptcha = new ReCaptcha($this->captchaSecretKey);
+                $resp = $recaptcha->verify($data['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 
-        // last username entered by the user
-        $lastUsername = $authenticationUtils->getLastUsername();
+                if($resp->isSuccess()){
+                    $email = $data['form']['email'];
+                    $password = $data['form']['password'];
+                    $session = new Session();
+                    $user = $this->getDoctrine()
+                        ->getRepository('FormRegistrationBundle:Users')
+                        ->findOneBy(['email' => $email]);
+                    if( $user ){
+                        $hashPassword = $user->getPassword();
+                        if(password_verify($password, $hashPassword)){
+                            $role = $user->getRole();
+                            $session->set('ROLE',$role);
+                            $session->getFlashBag()->add('role', $role);
+                            return $this->redirect($this->generateUrl('auth_success'));
+                        }
+                    }else{
+                        $session->getFlashBag()->add('login_error', 'Check the fields!!!');
+                        return $this->render('FormRegistrationBundle:Default:Login.html.twig', [
+                            'form' => $form->createView(),
+                        ]);
+                    }
+                }
+            }
+        }
 
         return $this->render('FormRegistrationBundle:Default:Login.html.twig', [
-            'last_username' => $lastUsername,
-            'error'         => $error,
+            'form' => $form->createView(),
         ]);
-
     }
+
+
+
 
     public function loginCheckAction(){
 

@@ -16,7 +16,6 @@ class AuthType extends AbstractType
     {
         $builder
             ->add('email', null,['label' => 'Your email', 'attr'=>['class' => 'form-control']])
-
             ->add('password', null, ['label' => 'Password', 'attr'=>['class' => 'form-control']])
         ;
     }

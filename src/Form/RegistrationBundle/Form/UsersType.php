@@ -32,18 +32,6 @@ class UsersType extends AbstractType
                     'ROLE_USER' =>'user',
                 ],
                 'label' => 'role', 'attr'=>['class' => 'form-control']])
-            ->add('recaptcha', 'ewz_recaptcha', array(
-                'attr'        => array(
-                    'options' => array(
-                        'theme' => 'dark',
-                        'type'  => 'image'
-                    )
-                ),
-                'mapped'      => false,
-                'constraints' => array(
-                    new RecaptchaTrue()
-                )
-            ))
 
 //            ->add('roles', new RolesType())
         ;
