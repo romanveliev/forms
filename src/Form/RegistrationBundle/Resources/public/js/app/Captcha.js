@@ -1,10 +1,10 @@
 define(['jquery'],function ($) {
 
-    function Captcha(){}
+    function Feedback(){}
 
     var widgetId1;
 
-    Captcha.prototype = {
+    Feedback.prototype = {
         onloadCallback: function() {
             widgetId1 =grecaptcha.render('captcha', {
                 'sitekey' : (function(){
@@ -17,5 +17,6 @@ define(['jquery'],function ($) {
         }
     }
 
-    return Captcha;
+    return Feedback;
+
 });

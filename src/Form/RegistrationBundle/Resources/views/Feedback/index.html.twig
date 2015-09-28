@@ -1,0 +1,27 @@
+{{ form_start(form,{'attr': {'novalidate': 'novalidate','class':'form-horizontal'}}) }}
+
+<div class="form-group">
+    {{ form_label(form.name)|trans|raw }}
+    {{ form_widget(form.name) }}
+    {{ form_errors(form.name) }}
+</div>
+
+<div class="form-group">
+    {{ form_label(form.email)|trans|raw }}
+    {{ form_widget(form.email) }}
+    {{ form_errors(form.email) }}
+</div>
+
+<div class="form-group">
+    {{ form_label(form.comment)|trans|raw }}
+    {{ form_widget(form.comment) }}
+    {{ form_errors(form.comment) }}
+</div>
+
+<div class="form-group">
+    <div id="feedback_captcha" data-siteKey="{{ captcha_public_key }}" ></div>
+</div>
+
+<button type="button" id="feedback_submit" class="btn btn-default">{% trans %}send_feedback{% endtrans %}</button>
+{{ form_end(form) }}
+

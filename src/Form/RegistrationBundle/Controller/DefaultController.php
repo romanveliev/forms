@@ -177,4 +177,6 @@ class DefaultController extends Controller
         return $this->render('FormRegistrationBundle:Default:cascadeValidation.html.twig', array(
             'form' => $form->createView()));
     }
+
+
 }

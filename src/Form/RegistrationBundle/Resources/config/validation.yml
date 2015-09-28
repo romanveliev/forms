@@ -30,3 +30,22 @@ Form\RegistrationBundle\Entity\Roles:
                 choices:  [ROLE_ADMIN, ROLE_USER]
 
 
+Form\RegistrationBundle\Entity\Feedback:
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                    min: 4
+        email:
+            - NotBlank: ~
+            - Email:
+                    message: The email {{ value }} is not a valid email.
+            - Length:
+                    min: 4
+                    max: 20
+
+        comment:
+            - NotBlank: ~
+            - Length:
+                    min: 4
+                    max: 300

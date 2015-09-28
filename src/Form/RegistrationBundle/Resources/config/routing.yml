@@ -47,3 +47,12 @@ cascade_validation:
     path:     /cascade
     defaults: { _controller: FormRegistrationBundle:Default:cascadeValidation }
 
+
+index_feedback:
+    path:     /index_feedback
+    defaults: { _controller: FormRegistrationBundle:Feedback:index }
+
+
+save_feedback:
+    path:     /save_feedback
+    defaults: { _controller: FormRegistrationBundle:Feedback:save }

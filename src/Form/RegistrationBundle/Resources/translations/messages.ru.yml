@@ -15,3 +15,6 @@ password_invalid_characters: Пароль содержит запрещенны�
 weak_password: Слабый пароль !
 good_password: Хороший пароль !
 too_many_symbols: Слишком много символов !!!
+
+
+send_feedback: send_feedback
