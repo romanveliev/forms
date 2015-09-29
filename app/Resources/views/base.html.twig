@@ -15,6 +15,26 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
+
+        {% block header %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        {% if app.session.flashBag.has('feedback') %}
+                            <div class="alert alert-success">
+                                {% for msg in app.session.flashBag.get('feedback') %}
+                                    {{ msg|trans }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        {% endblock %}
+
+
         {% block body %}
 
 
@@ -38,7 +58,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel">Название модали</h4>
+                            <h4 class="modal-title" id="myModalLabel">{% trans %}feedback{% endtrans %}</h4>
                         </div>
                         <div class="modal-body">
 

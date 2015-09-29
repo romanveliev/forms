@@ -15,3 +15,11 @@ password_invalid_characters: Password contains invalid characters (\' < > ! , @ 
 weak_password: Weak password
 good_password: Good password !!!
 too_many_symbols: Too many symbols !!!
+
+
+feedback: Feedback
+invalid_email_address: Invalid email address.
+all_fields_should_not_be_blank: All fields should not be blank.
+invalid_name: Invalid name.
+
+fill_fields_and_prove_you_are_a_human: Fill the fields and prove that you are a human.

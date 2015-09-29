@@ -17,4 +17,10 @@ good_password: Хороший пароль !
 too_many_symbols: Слишком много символов !!!
 
 
+feedback: Напишите нaм !
+invalid_email_address: Hеправильный формат email.
+all_fields_should_not_be_blank: Заполните все поля.
+invalid_name: Неправильный формат имени.
+
 send_feedback: send_feedback
+fill_fields_and_prove_you_are_a_human: Закполните поля и докажите,что Вы человек !!!
